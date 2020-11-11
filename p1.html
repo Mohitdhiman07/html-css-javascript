@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>rastaurant</title>
+    <link rel="stylesheet" href="p1.css">
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>
+                <div class="wrapper">
+                    <ul class="menu-area">
+                        <li>
+                            <a href="#">HOME</a>
+                        </li>
+                        <li>
+                            <a href="#">DISHES</a>
+                        </li>
+                        <li>
+                            <a href="#">BRANCHES</a>
+                        </li>
+                        <li>
+                            <a href="#">SERVICES</a>
+                            <ul>
+                                <li>
+                                    <a href="#">DESIGN</a>
+                                </li>
+                                <li>
+                                    <a href="#">GRAPHICS</a>
+                                    <ul>
+                                        <li>
+                                            <a href="#">LOGO</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">WEB</a>
+                                            <ul>
+                                                <li>
+                                                    <a href="#">HTML</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">WORDPRESS</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#">BROCHURE</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">MARKETING</a>
+                                </li>
+                                <li>
+                                    <a href="#">SEO</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">ABOUT US</a>
+                        </li>
+                        <li>
+                            <a href="#">CONTACT US</a>
+                        </li>
+                        <li>
+                            <a href="#">OUR BLOGS</a>
+                        </li>
+                        <li>
+                            <a href="#">OUR CHEFS</a>
+                        </li>
+                    </ul>
+                </div>
+            </td>
+            <td>
+                <div class="container">
+                    <div class="slide">
+                        <video controls id="slide" height="500">
+                                <source src="cavideo1.mp4" type="video/mp4">
+                            </video>
+                    </div>
+                    <div class="slide">
+                        <video controls id="slide" height="500">
+                                <source src="cavideo2.mp4" type="video/mp4">
+                            </video>
+                    </div>
+                    <div class="slide">
+                        <video controls id="slide" height="500">
+                                <source src="cavideo1.mp4" type="video/mp4">
+                            </video>
+                    </div>
+                    <a class="PREVIOUS" onclick="nextslide(1)">PREVIOUS</a>
+                    <a class="NEXT" onclick="nextslide(1)">NEXT</a>
+                </div>
+                <script type="text/javascript">
+                    var index = 1;
+                    displayslides(index);
+
+                    function nextslide(n) {
+                        displayslides((index = index + n));
+                    }
+
+                    function currentSlide(n) {
+                        displayslides((index = n));
+                    }
+
+                    function displayslides(n) {
+                        var i;
+                        var slides = document.getElementsByClassName("slide");
+                        if (n > slides.length) {
+                            index = 1;
+                        }
+                        if (n < 1) {
+                            index = slides.length;
+                        }
+                        for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";
+                        }
+                        slides[index - 1].style.display = "block";
+                    }
+                </script>
+            </td>
+            <td>
+                <div class="lk">
+                    <button>login</button>
+                    <button>signup</button>
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

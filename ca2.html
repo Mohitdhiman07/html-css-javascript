@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        #container ul {
+            list-style-type: none;
+        }
+        
+        #container ul li {
+            background-color: rgb(200, 200, 230);
+            width: 150px;
+            border: 1px solid white;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            float: left;
+            font-size: 18px;
+            position: relative;
+        }
+        
+        #container ul li:hover {
+            background-color: rgb(119, 179, 31);
+        }
+        
+        #container ul li:hover>ul {
+            display: block;
+        }
+        
+        #container ul ul {
+            display: none;
+        }
+        
+        #container ul ul ul {
+            margin-left: 150px;
+            top: 0;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <ul>
+            <li>home</li>
+            <li>about us</li>
+            <li>
+                entertainment
+                <ul>
+                    <li>bollywood</li>
+                    <li>
+                        hollywood
+                        <ul>
+                            <li>
+                                stars
+                            </li>
+                            <li>
+                                sports
+                            </li>
+                            <li>
+                                food
+                            </li>
+                        </ul>
+                    </li>
+                    <li>tollywood</li>
+                </ul>
+            </li>
+            <li>contact us</li>
+        </ul>
+    </div>
+</body>
+
+</html>

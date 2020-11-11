@@ -1,0 +1,144 @@
+body {
+    background-image: url("caimage\ \(2\).jpeg");
+    background-size: cover;
+}
+
+button {
+    padding: 10px;
+    margin-left: 10px;
+    margin-bottom: 580px;
+    margin-right: 0px;
+    margin-top: 0px;
+    background-image: linear-gradient(to right, pink, rgba(255, 255, 0, 0.747));
+    border-radius: 20%;
+}
+
+.slide img {
+    width: 1000px;
+    height: 500px;
+    border-radius: 100%;
+    border: 5px double cadetblue;
+    box-shadow: 78px 100px 150px 15px black;
+}
+
+video {
+    height: 400px;
+    padding-left: 250px;
+}
+
+.container {
+    position: relative;
+    width: 1000px;
+    margin: auto;
+}
+
+.PREVIOUS,
+.NEXT {
+    position: absolute;
+    top: 45%;
+    padding: 10px;
+    color: white;
+    background-image: linear-gradient(to left, pink, rgba(255, 255, 0, 0.747));
+    cursor: pointer;
+    border-radius: 10%;
+}
+
+.PREVIOUS:hover,
+.NEXT:hover {
+    background-color: rgba(9, 195, 170, 0.315);
+    border-radius: 100%;
+}
+
+.PREVIOUS {
+    left: 250px;
+}
+
+.NEXT {
+    left: 914px;
+}
+
+* {
+    margin: 0;
+}
+
+.wrapper {
+    position: relative;
+    padding: 0px;
+}
+
+.menu-area {
+    list-style: none;
+    padding: 0;
+    margin: 0px;
+    background-image: linear-gradient(to right, pink, rgba(255, 255, 0, 0.747));
+    width: 150px;
+    border-radius: 0 20px 20px 0;
+}
+
+.menu-area li {
+    position: relative;
+}
+
+.menu-area a {
+    text-align: center;
+    height: 36px;
+    position: relative;
+    border-bottom: 1px solid salmon;
+    display: block;
+    text-decoration: none;
+    padding: 20.5px 20px;
+    color: rgb(241, 18, 18);
+}
+
+.menu-area li a strong {
+    display: block;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+
+.menu-area li:hover>a {
+    color: black;
+    background-image: linear-gradient(to right, rgba(255, 0, 0, 0.575), white);
+}
+
+.menu-area li ul,
+.menu-area li ul li ul {
+    background-image: linear-gradient(to right, pink, rgba(255, 255, 0, 0.747));
+    visibility: hidden;
+    transition: 300ms;
+    left: 100px;
+    top: 0;
+    list-style: none;
+    position: absolute;
+    height: auto;
+    min-width: 0px;
+    padding: 0;
+    margin: 0;
+    border-radius: 0 20px 20px 0;
+}
+
+.menu-area li:hover>ul,
+.menu-area li ul li:hover>ul {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    left: 150px;
+}
+
+.menu-area li ul li a {
+    text-transform: uppercase;
+    font-size: 17px;
+    letter-spacing: 3px;
+    padding: 28.3px 18px;
+    text-align: center;
+    border: 0px;
+    border-bottom: 1px solid salmon;
+    height: auto;
+}
+
+.menu-area li ul li ul {
+    left: 100px;
+    top: 0;
+    border: 0;
+}

@@ -1,0 +1,35 @@
+body {
+    background-image: url("hb.png");
+    background-size: cover;
+}
+
+.container ul ul {
+    display: none;
+}
+
+ul {
+    list-style-type: none;
+    background-color: rgb(241, 215, 215);
+    float: left;
+    width: 80px;
+    position: absolute;
+    padding: 10px 10px 10px 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+* {
+    margin: 0;
+}
+
+li {
+    padding: 40px 10px 40px 0;
+}
+
+a :hover {
+    background-color: rgb(247, 99, 99);
+    transform: scale(1.24);
+    transition-duration: 00ms;
+}

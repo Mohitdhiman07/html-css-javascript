@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HOTEL BOOKING ROOM</title>
+    <style>
+        h3:hover {
+            background-color: aqua;
+        }
+        
+        input[type="text"],
+        select,
+        input[type="tel"],
+        input[type="number"],
+        input[type="email"],
+        input[type="time"],
+        input[type="date"] {
+            width: 200px;
+            padding: 10px;
+            margin: 10px;
+            border: 2px double blue;
+            border-radius: 40px;
+        }
+        
+        .lk:hover {
+            color: red;
+            background-color: aquamarine;
+            font-size: x-large;
+            border: 2px double black;
+        }
+        
+        input[type="text"]:hover,
+        select:hover,
+        input[type="tel"]:hover,
+        input[type="number"]:hover,
+        input[type="email"]:hover,
+        input[type="time"]:hover,
+        input[type="date"]:hover {
+            width: 250px;
+            padding: 15px;
+            margin: 15px;
+            border: 2px dashed pink;
+            border-radius: 30px;
+        }
+        
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: pink;
+            color: black;
+            font-size: x-large;
+        }
+        
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: aqua;
+            color: white;
+            padding: 10px;
+            margin: 8px;
+            border-radius: 40px;
+            cursor: pointer;
+            border: 2px solid pink;
+            width: 140px;
+        }
+        
+        table {
+            box-shadow: 5px 5px 5px 5px lightpink;
+        }
+        
+        .lk {
+            background-color: lightpink;
+            border-radius: 0 20px 20px 0;
+            font-size: large;
+        }
+        
+        body {
+            background-size: cover;
+        }
+        
+         ::placeholder {
+            color: turquoise;
+        }
+        
+        option {
+            color: rgb(180, 39, 39);
+            background-color: aquamarine;
+        }
+        
+        img {
+            height: 60px;
+            width: 200px;
+        }
+        
+        table {
+            background-image: linear-gradient(to bottom, Aqua, gold);
+            border-radius: 12px 70px;
+        }
+        
+        table:hover {
+            background-image: linear-gradient(to bottom right, lime, white);
+        }
+        
+        h3 {
+            background-color: gold;
+            color: blue;
+        }
+    </style>
+</head>
+
+<body background="hb.png">
+    <script>
+        function jsvalidation() {
+            if (document.my.name.value == "") {
+                alert("please fill the firstname ");
+                document.my.name.focus();
+                return false;
+            }
+            if (document.my.sname.value == "") {
+                alert("please fill the sirname ");
+                document.my.sname.focus();
+                return false;
+            }
+            if (document.my.mno.value == "") {
+                alert("please fill the mobile no. ");
+                document.my.mno.focus();
+                return false;
+            }
+            if (document.my.EMAIL.value == "") {
+                alert("please fill the email address");
+                document.my.EMAIL.focus();
+                return false;
+            }
+            if (document.my.nod.value == "") {
+                alert("please enter the no. of adults");
+                document.my.nod.focus();
+                return false;
+            }
+            if (document.my.noc.value == "") {
+                alert("please enter the no. of childs");
+                document.my.noc.focus();
+                return false;
+            }
+            if (document.my.add.value == "") {
+                alert("please fill the valid address");
+                document.my.add.focus();
+                return false;
+            }
+            if (document.my.cities.value == "Select") {
+                alert("please select the destination");
+                document.my.cities.focus();
+                return false;
+            }
+            if (document.my.dd.value == "") {
+                alert("please choose the arrival date");
+                document.my.dd.focus();
+                return false;
+            }
+            if (document.my.dt.value == "") {
+                alert("please choose the arrival  time");
+                document.my.dt.focus();
+                return false;
+            }
+            if (document.my.ad.value == "") {
+                alert("please choose the departure date");
+                document.my.ad.focus();
+                return false;
+            }
+            if (document.my.at.value == "") {
+                alert("please choose the departure time");
+                document.my.at.focus();
+                return false;
+            }
+            if (document.my.st.value == "") {
+                alert("please select the stay");
+                document.my.st.focus();
+                return false;
+            }
+            var HOTELTYPE = document.getElementsByName("HOTELTYPE");
+
+            var genval = false;
+            for (var i = 0; i < HOTELTYPE.length; i++) {
+                if (HOTELTYPE[i].checked == true) {
+                    genval = true;
+                }
+            }
+
+            if (genval == false) {
+                alert("Choose the hotel type");
+                return false;
+            }
+            var ROOMTYPE = document.getElementsByName("ROOMTYPE");
+
+            var rval = false;
+            for (var i = 0; i < ROOMTYPE.length; i++) {
+                if (ROOMTYPE[i].checked == true) {
+                    rval = true;
+                }
+            }
+
+            if (rval == false) {
+                alert("Choose the room type");
+                return false;
+            }
+            if (document.my.hj.value == "") {
+                alert("please write captcha ");
+                document.my.hj.focus();
+                return false;
+            }
+
+
+        }
+    </script>
+
+    <div>
+        <center>
+            <form name="my" onsubmit="return(jsvalidation())">
+                <table>
+                    <tr>
+                        <td>
+                            <h3>
+                                HOTEL BOOKING FORM
+                                <hr />
+                            </h3>
+                        </td>
+                    </tr>
+
+                    <tr style="color: blue;">
+                        <td>
+                            <div class="lk">FULL NAME</div>
+                        </td>
+                        <td>
+                            <input name="name" type="text" placeholder="please enter your full name" />
+                        </td>
+                    </tr>
+                    <tr style="color: blue;">
+                        <td>
+                            <div class="lk">SIR NAME</div>
+                        </td>
+                        <td>
+                            <input name="sname" type="text" placeholder="please enter your sir name" />
+                        </td>
+                    </tr>
+
+                    <tr style="color: blue;">
+                        <td>
+                            <div class="lk">MOBILE NUMBER</div>
+                        </td>
+                        <td>
+                            <input name="mno" type="tel" maxlength="10" placeholder="please enter your mobile no." />
+                        </td>
+                    </tr>
+                    <tr style="color: blue;">
+                        <td>
+                            <div class="lk">EMAIL</div>
+                        </td>
+                        <td>
+                            <input name="EMAIL" type="email" placeholder="please enter your valid email" />
+                        </td>
+                    </tr>
+                    <tr style="color: blue;">
+                        <td>
+                            <div class="lk">NO. OF ADULTS</div>
+                        </td>
+                        <td>
+                            <input name="nod" type="number" placeholder="choose no.of adults" />
+                        </td>
+                    </tr>
+                    <tr style="color: blue;">
+                        <td>
+                            <div class="lk">NO. OF CHILDS</div>
+                        </td>
+                        <td>
+                            <input name="noc" type="number" placeholder="choose no.of childs" />
+                        </td>
+                    </tr>
+                    <tr style="color: blue;">
+                        <td>
+                            <div class="lk">ADDRESS</div>
+                        </td>
+                        <td>
+                            <textarea name="add" rows="5" cols="10" placeholder="please enter your address"></textarea>
+                            <tr style="color: blue;">
+                                <td>
+                                    <div class="lk">SELECT DESTINATION</div>
+                                </td>
+                                <td>
+                                    <select id="cities">
+                      <option value="Select">Select</option>
+                      <option value="HP">HIMACHAL PRADESH</option>
+
+                      <option value="PB">PUNJAB</option>
+                      <option value="HR">HARYANA</option>
+                      <option value="DL">DELHI</option>
+                      <option value="MH">MUMBAI</option>
+                      <option value="AS">ASSAM</option>
+                      <option value="MP">MADHYA PRADESH</option>
+                      <option value="JM">JAMMU & KASHMIR</option>
+                      <option value="TM">TAMILNADU</option>
+                      <option value="KR">KERALA</option>
+                    </select>
+                                </td>
+                            </tr>
+
+                            <tr style="color: blue;">
+                                <td>
+                                    <div class="lk">ARRIVAL DATE & TIME</div>
+                                </td>
+                                <td>
+                                    <input name="dd" type="date" placeholder="choose the ARR. time" />
+                                    <td>
+                                        <div class="lk">ARRIVAL TIME</div>
+                                        <input name="dt" type="time" placeholder="choose the ARR. time" />
+                                    </td>
+                                </td>
+                            </tr>
+                            <tr style="color: blue;">
+                                <td>
+                                    <div class="lk">DEPARTURE DATE</div>
+                                </td>
+                                <td>
+                                    <input name="ad" type="date" placeholder="choose the dep. time" />
+                                    <td>
+                                        <div class="lk">DEPARTURE TIME</div> <input name="at" type="time" placeholder="choose the dep. time" />
+                                    </td>
+                                </td>
+                            </tr>
+                            <tr style="color: blue;">
+                                <td>
+                                    <div class="lk">STAY INTERVAL</div>
+                                </td>
+                                <td>
+                                    <input name="st" type="number" placeholder="choose the stay days" />
+                                </td>
+                            </tr>
+                            <tr style="color: blue;">
+                                <td>
+                                    <div class="lk">HOTEL TYPE</div>
+                                </td>
+                                <td>
+                                    <input name="HOTELTYPE" type="radio" />ORDINARY
+                                    <input name="HOTELTYPE" type="radio" /> LUXURY
+                                    <input name="HOTELTYPE" type="radio" />EXTRA-LUXURY
+                                </td>
+                            </tr>
+
+                            <tr style="color: blue;">
+                                <td>
+                                    <div class="lk">ROOM TYPE</div>
+                                </td>
+                                <td>
+                                    <input name="ROOMTYPE" type="radio" />1BHK &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                    <input name="ROOMTYPE" type="radio" />2BHK&nbsp; &nbsp; &nbsp; &nbsp; <input name="ROOMTYPE" type="radio" />3BHK
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="capcha.png" />
+                                </td>
+
+                                <td>
+                                    <input name="hj" type="text" pattern="V4XBG" maxlength="5" placeholder="enter the captcha here" />
+                                </td>
+
+
+                                <tr>
+                                    <td></td>
+                                    <td>
+                                        <input type="submit" />
+                                        <input type="reset" />
+                                    </td>
+                                </tr>
+                        </td>
+                        </tr>
+                </table>
+            </form>
+        </center>
+    </div>
+</body>
+
+</html>
